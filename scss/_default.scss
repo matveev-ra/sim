@@ -1,6 +1,15 @@
-@import "../styles/fonts.css" screen;
+// @import "../styles/fonts.css" screen;
 *{margin:0;padding:0}
-body,input,select,select option,textarea{ font-family: 'CeraPro-Regular', 'Open Sans', sans-serif; font-style: normal; font-size:14px;}
+body,
+input,
+select,
+select option,
+textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
 html { height: 100%; background: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body{min-height:100%;line-height:1.4;color:#000}
 img{border:0}

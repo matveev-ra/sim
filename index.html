@@ -8,46 +8,275 @@
 	<meta name="Keywords" content=""/>
 	<meta name="Description" content=""/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles/layout.css" type="text/css"/>
-	<script src="js/jquery-1.9.0.min.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
 
- <style>
-  div {
-    color: red;
-  }
-  </style>
-
+  <link rel="stylesheet" href="styles/owl.carousel.css" type="text/css"/>
+  <link rel="stylesheet" href="styles/owl.theme.default.css" type="text/css"/> 
 
 
 
-<!--[if lte IE 8]>
-	<link rel="stylesheet" href="styles/ie.css" type="text/css"/>
-<![endif]-->
+  <!-- <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
+
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/> -->
+	
 </head>
 <body>
-<select name="sweets" >
-  <option>none</option>
-  <option >Candy</option>
-  <option>Taffy</option>
-  <option >Caramel</option>
-  <option>Fudge</option>
-  <option>Cookie</option>
-</select>
-<div ></div>
- 
+
+ <div class="Main">
+	<div class="Header">
+	   <section class="Top">
+		   <div class="Logo"><img src="images/logo.svg" alt=""></div>
+		   <div class="Top-menu">
+			   <ul>
+				   <li> <a href="">О нас</a> </li>
+				   <li> <a href="">Услуги и цены</a> </li>
+				   <li> <a href="">Наши работы</a> </li>
+				   <li> <a href="">Отзывы</a> </li>
+				   <li> <a href="">Контакты</a> </li>
+			   </ul>
+		   </div>
+	   </section>
+	   <section class="Head">
+			<div class="h1main">Заголовок</div>
+			<div class="Head__desc">Подзаголовок</div>
+			<div class="Btn1">
+				<a href="">Хочу консультацию!</a>
+			</div>
+	   </section>
+	</div>
+	<!--/Header -->
+
+  <section class="Doctors">
+    <div class="hdmain">Врачи</div>
+    <div class="Slider-doctor owl-carousel Slider1">
+      <div class="slide">
+        <div class="img"><img src="images/img1.jpg" alt=""></div>
+        <div class="name">ФИО</div>
+        <div class="status">Должность</div>
+      </div>
+      <div class="slide">
+        <div class="img"><img src="images/img2.jpg" alt=""></div>
+        <div class="name">ФИО</div>
+        <div class="status">Должность</div>
+      </div>
+      <div class="slide">
+        <div class="img"><img src="images/img3.jpg" alt=""></div>
+        <div class="name">ФИО</div>
+        <div class="status">Должность</div>
+      </div>
+      <div class="slide">
+        <div class="img"><img src="images/img1.jpg" alt=""></div>
+        <div class="name">ФИО</div>
+        <div class="status">Должность</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="Our-work">
+    <section>
+      <div class="hdmain">Наши работы</div>
+      <div class="Our-work__wrap">
+        <div class="Our-work__item">
+          <div class="img">
+            <img src="images/img-work1.jpg" alt="">
+            <div class="title">Работа 1</div>
+          </div>
+          <div class="img">
+            <img src="images/img-work3.jpg" alt="">
+            <div class="title">Работа 3</div>
+          </div>
+        </div>
+        <div class="Our-work__item">
+          <div class="img">
+            <img src="images/img-work2.jpg" alt="">
+            <div class="title">Работа 2</div>
+          </div>
+          <div class="img">
+            <img src="images/img-work4.jpg" alt="">
+            <div class="title">Работа 4</div>
+          </div>
+        </div>
+        <div class="Our-work__item">
+          <div class="img">
+            <img src="images/img-work5.jpg" alt="">
+            <div class="title">Работа 5</div>
+          </div>
+        </div>
+      </div>
+      <div class="all-link">
+        <a href="" class="all-link">К полному списку наших работ</a>
+      </div>
+    </section>
+  </div>
+  <!-- /Our-work -->
+
+  <section class="Aparat">
+    <div class="hdmain">Оборудование</div>
+    <div class="Aparat__wrap">
+      <div class="Aparat__item">
+        <div class="in">
+          <div class="img">
+            <img src="images/img-aparat1.jpg" alt="">
+          </div>
+          <div class="img">
+            <img src="images/img-aparat2.jpg" alt="">
+          </div>
+        </div>
+        <div class="img">
+          <img src="images/img-aparat3.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="Aparat__item">
+        <div class="img">
+          <img src="images/img-aparat4.jpg" alt="">
+        </div>
+        <div class="in">
+          <div class="img">
+            <img src="images/img-aparat5.jpg" alt="">
+          </div>
+          <div class="img">
+            <img src="images/img-aparat6.jpg" alt="">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="all-link">
+      <a href="" class="all-link">Открыть полный нашего оборудования</a>
+    </div>
+
+  </section>
+
+  <div class="FormaZ">
+    <section>
+      <div class="HD">Записаться на  консультацию</div>
+      <div class="desc">Для того, чтобы получить бесплатную консультацию, 
+        оставьте заявку на сайте и наш менеджер с вами свяжется</div>
+        
+      <form method="post" action="" name="myform">
+          <div class="pole">
+              <input type="text" name="name" placeholder="Имя">
+          </div>
+          <div class="pole">
+              <input type="text" name="phone" placeholder="Телефон">
+          </div>
+          <div class="submit">
+              <button name="" type="submit">Заказать звонок</button>
+              <div class="politica">
+                 <input class="checkbox" type="checkbox" name="checkbox" value="Согласие" required=""  checked="checked"/>
+                <div class="text">Даю согласие на <a href="">обработку данных.</a></div>
+              </div>
+          </div>
+      </form>
+    </section>       
+  </div>
+
+  <section class="Reviews">
+    <div class="hdmain">Отзывы наших клиентов</div>
+    <div class="Slider-reviews owl-carousel Slider2">
+      <div class="slide">
+        <img src="images/img-example.png" alt="">
+        <span>1</span>
+      </div>
+      <div class="slide">
+        <img src="images/img-example.png" alt="">
+        <span>1</span>
+      </div>
+      <div class="slide">
+        <img src="images/img-example.png" alt="">
+        <span>1</span>
+      </div>
+      <div class="slide">
+        <img src="images/img-example.png" alt="">
+        <span>1</span>
+      </div>
+      <div class="slide">
+        <img src="images/img-example.png" alt="">
+        <span>1</span>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+<!--/Main -->
+
+
+<!-- <script src="js/jquery-1.9.0.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/owl.carousel.js"></script>
+
+
+
 <script>
-$( "select" ).change(function () {
-    var str = "99";
+  $(document).ready(function () {
 
-    $( "select option:selected" ).each(function() {
-      str += $( this ).text() + " ";
-    });
+    $('.Slider1').owlCarousel({
+      center: true,
+      items:3,
+      loop:true,
+      margin:10,
+      nav:true,
+      dots: false
+    // margin:10,
+    // responsive:{
+    //     600:{
+    //         items:4
+    //     }
+    // }
+});
+    $('.Slider2').owlCarousel({
+      // center: true,
+      items:2,
+      loop:true,
+      margin:10,
+      nav:true,
+      dots: false
+    // margin:10,
+    // responsive:{
+    //     600:{
+    //         items:4
+    //     }
+    // }
+});
 
-    $( "div" ).text( str );
-  })
-  .change();
-</script>
+
+
+
+    // $('.Slider1').slick({
+    //   centerMode: true,
+    //   centerPadding: '60px',
+    //   slidesToShow: 3,
+    //   infinite: true
+
+    // });
+
+
+    // $('ul.Hug').roundabout({
+    //   shape: 'square'
+    //   });
+  
+  });
+  </script>
+
+
 
 </body>
 </html>
