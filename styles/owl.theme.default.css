@@ -50,6 +50,10 @@
 .Slider-doctor .owl-nav .owl-prev:hover,
 .Slider-doctor .owl-nav .owl-next:hover  {}
 
+.Slider-doctor  .owl-nav button.owl-prev:focus,
+.Slider-doctor  .owl-nav button.owl-next:focus {
+  outline: none;
+}
 
 .Slider-doctor .owl-nav .disabled {
   opacity: 0.5;
@@ -89,10 +93,15 @@
   background: #869791;
 }
 
+
+
+
+
+
 /* ////////////////// */
 
 .Slider-reviews .owl-stage {
-  padding: 50px 0 100px;
+  padding: 20px 0;
 }
 .Slider-reviews .owl-item {
   padding: 0 10px;
@@ -109,7 +118,7 @@
   text-align: center;
   -webkit-tap-highlight-color: transparent;
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: 100%;
 }
 
@@ -123,6 +132,7 @@
   
 }
 
+
 .Slider-reviews .owl-nav button.owl-prev {
   background: url('../images/arrow-slider1-left.svg') center top no-repeat;
   left: -50px;
@@ -135,6 +145,10 @@
 .Slider-reviews .owl-nav .owl-prev:hover,
 .Slider-reviews .owl-nav .owl-next:hover  {}
 
+.Slider-reviews .owl-nav button.owl-prev:focus,
+.Slider-reviews .owl-nav button.owl-next:focus {
+  outline: none;
+}
 
 .Slider-reviews .owl-nav .disabled {
   opacity: 0.5;
