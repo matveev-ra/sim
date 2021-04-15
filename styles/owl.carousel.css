@@ -37,6 +37,7 @@
   overflow: hidden;
   /* fix for flashing background */
   -webkit-transform: translate3d(0px, 0px, 0px);
+  /* z-index: 1; */
 }
 
 .owl-carousel .owl-wrapper,
@@ -87,6 +88,7 @@
   border: none;
   padding: 0 !important;
   font: inherit;
+  margin: 0 10px;
 }
 
 .owl-carousel.owl-loaded {

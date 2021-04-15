@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="styles/owl.carousel.css" type="text/css"/>
   <link rel="stylesheet" href="styles/owl.theme.default.css" type="text/css"/> 
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
 
   <!-- <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
@@ -25,30 +26,36 @@
 </head>
 <body>
 
- <div class="Main">
+<div class="Main">
+
 	<div class="Header">
 	   <section class="Top">
 		   <div class="Logo"><img src="images/logo.svg" alt=""></div>
-		   <div class="Top-menu">
-			   <ul>
-				   <li> <a href="">О нас</a> </li>
+		   <div class="Top-menu" id="Topmenu">
+        <div id="hamburger">
+          <span></span>
+        </div>
+			   <ul class="dropDownMenu">
+				   <li> <a href="#link1">О нас</a> </li>
 				   <li> <a href="">Услуги и цены</a> </li>
-				   <li> <a href="">Наши работы</a> </li>
+				   <li> <a href="#link2">Наши работы</a> </li>
 				   <li> <a href="">Отзывы</a> </li>
-				   <li> <a href="">Контакты</a> </li>
+				   <li> <a href="#link3">Контакты</a> </li>
 			   </ul>
-         <div class="phone"><a href="">8(000)000-00-00</a></div>
+         <div class="phone"><a href="tel:+79645163829">+7 (964) 516-38-29</a></div>
 		   </div>
 	   </section>
 
 	   <section class="Head">
+
       <div class="HeadL">
-            <div class="h1main">Заголовок</div>
-            <div class="HeadL__desc">Подзаголовок</div>
-            <!-- <div class="Btn1">
-              <a href="#zakazzvonok" class="bpopup">Хочу консультацию!</a>
-            </div> -->
+        <div class="h1main">Заголовок</div>
+        <div class="HeadL__desc">Подзаголовок</div>
+        <!-- <div class="Btn1">
+          <a href="#zakazzvonok" class="bpopup">Хочу консультацию!</a>
+        </div> -->
       </div>
+
       <div class="HeadR">
         <div class="HeadR__hd">
           Безболезненная имплантация за 20 минут 
@@ -56,72 +63,37 @@
         <div class="HeadR__desc">
           По европейской технологии с бессрочной гарантией на всю жизнь
         </div>
-        <div class="Forma-top" >
+
+        <div class="Forma" >
           
           <div class="FormaH">
             <div class="hd">Получите консультацию<br/> специалиста бесплатно</div>
-            <p>Оставьте заявку и мы вам перезвоним</p>
           </div>
 
-          <form id="form" class="form1">
+          <form  class="form1" id="forma-top">
+              <input type="hidden" name="formData" value="Заявка с сайта">
               <div class="e">
-                <input type="text" name="phone" id="phone"  placeholder="Ваш телефон"  value="" />
+                <input type="text" name="phone"   placeholder="Ваш телефон"  value="" />
               </div>
               
               <div class="submit">
-                <button value="" id="Submit" type="submit">отправить</button>
+                <button value="" type="submit">отправить</button>
                 <div class="politica">
                   <input class="checkbox" type="checkbox" name="checkbox" value="Согласие" required=""  checked="checked"/>
                  <div class="text">Даю согласие на <a href="">обработку данных.</a></div>
                </div>
               </div>
-              <div id="error"></div>
+              <div class="error"></div>
           </form> 
           
         </div>
-
-
-
-
-
-
       </div>
 
-
-
-			
-	   </section>
-     
+		</section>
 	</div>
 	<!--/Header -->
 
-  <section class="Doctors" style="display:none;">
-    <div class="hdmain">Врачи</div>
-    <div class="Slider-doctor owl-carousel Slider1">
-      <div class="slide">
-        <div class="img"><img src="images/img1.jpg" alt=""></div>
-        <div class="name">ФИО</div>
-        <div class="status">Должность</div>
-      </div>
-      <div class="slide">
-        <div class="img"><img src="images/img2.jpg" alt=""></div>
-        <div class="name">ФИО</div>
-        <div class="status">Должность</div>
-      </div>
-      <div class="slide">
-        <div class="img"><img src="images/img3.jpg" alt=""></div>
-        <div class="name">ФИО</div>
-        <div class="status">Должность</div>
-      </div>
-      <div class="slide">
-        <div class="img"><img src="images/img1.jpg" alt=""></div>
-        <div class="name">ФИО</div>
-        <div class="status">Должность</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="ClinicCase">
+  <div class="ClinicCase" id="link1">
     <section>
       <div class="hdmain">Мы работаем с любыми клиническими случаями:</div>
       <div class="ClinicCase__desc">Даже с очень сложными</div>
@@ -158,7 +130,6 @@
 
     </section>
   </div>
-
 
   <section class="Tehnika">
     <div class="hdmain">
@@ -210,7 +181,8 @@
       <div class="desc">Для того, чтобы получить бесплатную консультацию, 
         оставьте заявку на сайте и наш менеджер с вами свяжется</div>
         
-      <form>
+      <form id="forma-middle">
+          <input type="hidden" name="formData" value="Заявка с сайта">
           <div class="pole">
               <input type="text" name="name" placeholder="Имя">
           </div>
@@ -218,34 +190,107 @@
               <input type="text" name="phone" placeholder="Телефон">
           </div>
           <div class="submit">
-              <button name="" type="submit" id="Submit1">Заказать звонок</button>
+              <button name="" type="submit" id="">Заказать звонок</button>
               <div class="politica">
                  <input class="checkbox" type="checkbox" name="checkbox" value="Согласие" required=""  checked="checked"/>
                 <div class="text">Даю согласие на <a href="">обработку данных.</a></div>
               </div>
           </div>
 
+          <div class="error"></div>
           
       </form>
       
     </section>       
   </div>
 
-
-  <section class="">
+  <section class="Spectr">
     <div class="hdmain">Подберём самый подходящий 
       метод имплантации</div>
 
-      <div class="Slider-reviews owl-carousel Slider2">
-        <div class="slide">
-          
+
+      <div class="Slider-Spectr owl-carousel Slider3">
+        <div class="SpectrSlide">
+          <div class="SpectrSlide__label">Терапия</div>
+          <div class="SpectrSlide__wrap">
+            <div class="SpectrSlide__info"></div>
+            <div class="SpectrSlide__title">Терапия</div>
+            <div class="SpectrSlide__desc">
+              Показания:
+              <span>
+                сразу после удаления зуба ускореное заживление
+                ускоренное приживление импланта
+              </span>
+            </div>
+            <div class="SpectrSlide__price">
+              Стоимость: <span>от 29,9 т.р.</span>
+            </div>
+            <a href="" class="link-diognost">Записаться на диагностику</a>
+          </div>
         </div>
-      </div 
+        <!-- /SpectrSlide -->
+        <div class="SpectrSlide">
+          <div class="SpectrSlide__label">Терапия</div>
+          <div class="SpectrSlide__wrap">
+            <div class="SpectrSlide__info"></div>
+            <div class="SpectrSlide__title">Терапия</div>
+            <div class="SpectrSlide__desc">
+              Показания:
+              <span>
+                сразу после удаления зуба ускореное заживление
+                ускоренное приживление импланта
+              </span>
+            </div>
+            <div class="SpectrSlide__price">
+              Стоимость: <span>от 29,9 т.р.</span>
+            </div>
+            <a href="" class="link-diognost">Записаться на диагностику</a>
+          </div>
+        </div>
+        <!-- /SpectrSlide -->
+        <div class="SpectrSlide">
+          <div class="SpectrSlide__label">Терапия</div>
+          <div class="SpectrSlide__wrap">
+            <div class="SpectrSlide__info"></div>
+            <div class="SpectrSlide__title">Терапия</div>
+            <div class="SpectrSlide__desc">
+              Показания:
+              <span>
+                сразу после удаления зуба ускореное заживление
+                ускоренное приживление импланта
+              </span>
+            </div>
+            <div class="SpectrSlide__price">
+              Стоимость: <span>от 29,9 т.р.</span>
+            </div>
+            <a href="" class="link-diognost">Записаться на диагностику</a>
+          </div>
+        </div>
+        <!-- /SpectrSlide -->
+        <div class="SpectrSlide">
+          <div class="SpectrSlide__label">Терапия</div>
+          <div class="SpectrSlide__wrap">
+            <div class="SpectrSlide__info"></div>
+            <div class="SpectrSlide__title">Терапия</div>
+            <div class="SpectrSlide__desc">
+              Показания:
+              <span>
+                сразу после удаления зуба ускореное заживление
+                ускоренное приживление импланта
+              </span>
+            </div>
+            <div class="SpectrSlide__price">
+              Стоимость: <span>от 29,9 т.р.</span>
+            </div>
+            <a href="" class="link-diognost">Записаться на диагностику</a>
+          </div>
+        </div>
+        <!-- /SpectrSlide -->
+      </div> 
 
   </section>
 
-
-  <div class="Our-work">
+  <div class="Our-work" id="link2">
     <section>
       <div class="hdmain">Наши работы</div>
       <div class="Our-work__wrap">
@@ -283,8 +328,193 @@
   </div>
   <!-- /Our-work -->
 
+  <div class="Country">
+    <section>
+      <div class="hdmain">
+        Мы используем самые надежные импланты лидеров рынка:
+      </div>
+      <div class="Country__wrap">
+
+        <div class="Country__item">
+          <div class="Country__top">
+            <div class="hd">
+              <b>Straumann</b>
+              <span>Швейцария</span>
+            </div>
+            <div class="img"> </div>
+          </div>
+          <div class="Country__price">
+            <div class="titl">Стоимость</div>
+            <div class="summ">48 т.р</div>
+          </div>
+          <div class="Country__desc">
+            <div class="titl">Что входит в стоимость</div>
+            <div class="txt">
+              <ul>
+                <li>Имплант с установкой</li>
+                <li>Формирователь десны</li>
+                <li>Абатмент</li>
+                <li>Коронка с установкой</li>
+              </ul>
+            </div>
+          </div> 
+          <a href="" class="link-diognost">Записаться на диагностику</a>
+        </div> 
+        <!-- /Country__item -->
+        <div class="Country__item">
+          <div class="Country__top">
+            <div class="hd">
+              <b>Straumann</b>
+              <span>Швейцария</span>
+            </div>
+            <div class="img"> </div>
+          </div>
+          <div class="Country__price">
+            <div class="titl">Стоимость</div>
+            <div class="summ">48 т.р</div>
+          </div>
+          <div class="Country__desc">
+            <div class="titl">Что входит в стоимость</div>
+            <div class="txt">
+              <ul>
+                <li>Имплант с установкой</li>
+                <li>Формирователь десны</li>
+                <li>Абатмент</li>
+                <li>Коронка с установкой</li>
+              </ul>
+            </div>
+          </div> 
+          <a href="" class="link-diognost">Записаться на диагностику</a>
+        </div> 
+        <!-- /Country__item -->
+        <div class="Country__item">
+          <div class="Country__top">
+            <div class="hd">
+              <b>Straumann</b>
+              <span>Швейцария</span>
+            </div>
+            <div class="img"> </div>
+          </div>
+          <div class="Country__price">
+            <div class="titl">Стоимость</div>
+            <div class="summ">48 т.р</div>
+          </div>
+          <div class="Country__desc">
+            <div class="titl">Что входит в стоимость</div>
+            <div class="txt">
+              <ul>
+                <li>Имплант с установкой</li>
+                <li>Формирователь десны</li>
+                <li>Абатмент</li>
+                <li>Коронка с установкой</li>
+              </ul>
+            </div>
+          </div> 
+          <a href="" class="link-diognost">Записаться на диагностику</a>
+        </div> 
+        <!-- /Country__item -->
+        <div class="Country__item">
+          <div class="Country__top">
+            <div class="hd">
+              <b>Straumann</b>
+              <span>Швейцария</span>
+            </div>
+            <div class="img"> </div>
+          </div>
+          <div class="Country__price">
+            <div class="titl">Стоимость</div>
+            <div class="summ">48 т.р</div>
+          </div>
+          <div class="Country__desc">
+            <div class="titl">Что входит в стоимость</div>
+            <div class="txt">
+              <ul>
+                <li>Имплант с установкой</li>
+                <li>Формирователь десны</li>
+                <li>Абатмент</li>
+                <li>Коронка с установкой</li>
+              </ul>
+            </div>
+          </div> 
+          <a href="" class="link-diognost">Записаться на диагностику</a>
+        </div> 
+        <!-- /Country__item -->
+
+      </div>
+
+    </section> 
+  </div>
+
+  <div class="Utp">
+      <section>
+        <div class="Forma" >
+                
+          <div class="FormaH">
+            <div class="hd">Узнайте, какой имплант <br/>
+              подойдет Вам на 100%</div>
+          
+          </div>
+
+          <form class="form1" id="forma-bottom">
+            <input type="hidden" name="formData" value="Заявка с сайта">
+            <div class="e">
+              <input type="text" name="phone" placeholder="Ваш телефон" value="" />
+            </div>
+
+            <div class="submit">
+              <button value="" type="submit">отправить</button>
+              <div class="politica">
+                <input class="checkbox" type="checkbox" name="checkbox" value="Согласие" required=""
+                  checked="checked" />
+                <div class="text">Даю согласие на <a href="">обработку данных.</a></div>
+              </div>
+            </div>
+            <div class="error"></div>
+          </form>
+          
+        </div>
+      </section>
+  </div>
+  
+  <div class="Doctors">
+    <section >
+      <div class="hdmain">Врачи</div>
+      <div class="Slider-doctor owl-carousel Slider1">
+        <div class="slide">
+          <div class="img"><img src="images/img1.jpg" alt=""></div>
+          <div class="name">ФИО</div>
+          <div class="status">Должность</div>
+        </div>
+        <div class="slide">
+          <div class="img"><img src="images/img2.jpg" alt=""></div>
+          <div class="name">ФИО</div>
+          <div class="status">Должность</div>
+        </div>
+        <div class="slide">
+          <div class="img"><img src="images/img3.jpg" alt=""></div>
+          <div class="name">ФИО</div>
+          <div class="status">Должность</div>
+        </div>
+        <div class="slide">
+          <div class="img"><img src="images/img1.jpg" alt=""></div>
+          <div class="name">ФИО</div>
+          <div class="status">Должность</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="Diplom">
+    <div class="hdmain">Дипломы и сертификаты</div>
+    <div class="Diplom__wrap">
+      <img src="images/diplom.jpg" alt="">
+      <img src="images/diplom.jpg" alt="">
+      <img src="images/diplom.jpg" alt="">
+    </div>
+  </section>
+
   <section class="Aparat">
-    <div class="hdmain">Оборудование</div>
+    <div class="hdmain">Наша стоматология</div>
     <div class="Aparat__wrap">
       <div class="Aparat__item">
         <div class="in">
@@ -321,9 +551,7 @@
 
   </section>
 
-  
-
-  <section class="Reviews">
+  <section class="Reviews" style="display:none;">
     <div class="hdmain">Отзывы наших клиентов</div>
     <div class="Slider-reviews owl-carousel Slider2">
       <div class="slide">
@@ -349,7 +577,7 @@
     </div>
   </section>
 
-  <section class="Reviews">
+  <section class="Reviews" style="display:none;">
     <div class="hdmain">Видео-отзывы</div>
     <div class="Slider-reviews owl-carousel Slider2">
       <div class="slide">
@@ -375,14 +603,14 @@
     </div>
   </section>
 
-  <div class="Map">
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A17b91e7cfcd4daa80d0c8d2d3eb28702ff354deb37575f8caee4cb7d04e5dec0&amp;width=100%25&amp;height=678&amp;lang=ru_RU&amp;scroll=false"></script>
+  <div class="Map" id="map">
+    <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A17b91e7cfcd4daa80d0c8d2d3eb28702ff354deb37575f8caee4cb7d04e5dec0&amp;width=100%25&amp;height=678&amp;lang=ru_RU&amp;scroll=false"></script> -->
 
-    <div class="Map__info">
+    <div class="Map__info" id="link3">
       <div class="HD">Наши контакты: </div>
       <span><b>Наш адрес:</b> Москва, ул. Кусковская 20 A, корпус А, офис 210А </span>
-      <span><b>Email:</b> vsetkanityt@gmail.com</span>
-      <span><b>Телефон:</b> 8(495)923-40-10</span>
+      <span><b>Email:</b> stomat-Sim@yandex.ru</span>
+      <span><b>Телефон:</b> +7 (964) 516-38-29</span>
       <span>
         <b>Пн-Пт:</b> 9:00 - 21:00<br/>
         <b>Сб:</b> 10:00 - 17:00<br/>
@@ -410,11 +638,11 @@
         <div class="hd">Наши контакты</div>
         <div class="e">
           <img src="images/icon-phone.svg" alt="">
-          <span>8(919) 996 68 96</span>
+          <span>+7 (964) 516-38-29</span>
         </div>
         <div class="e">
           <img src="images/icon-mail.svg" alt="">
-          <span>mmm@gmail.com</span>
+          <span>stomat-Sim@yandex.ru</span>
         </div>
         <div class="e">
           <img src="images/icon-map.svg" alt="">
@@ -451,7 +679,8 @@
     <div class="hd">Получите консультацию<br/> специалиста бесплатно</div>
     <p>Оставьте заявку и мы вам перезвоним</p>
   </div>
-	<form id="form" class="form1">
+	<form id="forma-modal" class="form1">
+      <input type="hidden" name="formData" value="Заявка с сайта">
 			<div class="e">
 				<input type="text" name="name" id="name"  placeholder="Ваше имя"  value="" />
 			</div>
@@ -460,19 +689,22 @@
 			</div>
 			
 			<div class="submit">
-        <button value="" id="Submit" type="submit">отправить</button>
+        <button value=""  id="Submit" type="submit">отправить</button>
+
         <div class="politica">
           <input class="checkbox" type="checkbox" name="checkbox" value="Согласие" required=""  checked="checked"/>
          <div class="text">Даю согласие на <a href="">обработку данных.</a></div>
        </div>
       </div>
-      <div id="error"></div>
+
+      <div class="error"></div>
+
 	</form> 
   
 </div>
 <!-- /MODAL /////////////////////////////////////////////////////-->
 
-<div class="overlay2 js-overlay-thank-you">
+<div class="overlay2 js-overlay-thank-you" style="display:none;">
   <div class="modal2 js-thank-you">
     <h2>Спасибо за заявку</h2>
     <div class="close-modal js-close-thank-you"></div>
@@ -492,46 +724,11 @@
 
 
 
+
 <script>
   $(document).ready(function () {
 
-$('.Slider1').owlCarousel({
-  center: true,
-  items:3,
-  loop:true,
-  margin:10,
-  nav:true,
-  dots: false
-// margin:10,
-// responsive:{
-//     600:{
-//         items:4
-//     }
-// }
-});
-$('.Slider2').owlCarousel({
-      // center: true,
-      items:2,
-      loop:true,
-      margin:10,
-      nav:true,
-      dots: false
-    // margin:10,
-    // responsive:{
-    //     600:{
-    //         items:4
-    //     }
-    // }
-});
 
-
-$('.bpopup').click(function(e) {
-      e.preventDefault();
-      var href = $(this).attr('href');
-      $(href).bPopup({
-              closeClass:'close'
-          });
-  });
 
   
 });
